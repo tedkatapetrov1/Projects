@@ -6,7 +6,8 @@ const questions = [
         { text: "Пловдив", correct: false },
         { text: "Варна", correct: false },
         { text: "Русе", correct: false }
-      ]
+      ], 
+      explanation: "Столицата на България е София от 1879 година."
     },
     {
       question: "Кой е написал 'Под игото'?",
