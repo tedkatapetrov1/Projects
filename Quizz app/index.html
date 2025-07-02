@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="bg">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trivia Quiz</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Quiz</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <div class="quiz-container">
-    <h1>Trivia Quiz</h1>
-    <div id="question-container">
-      <div id="question">Въпросът ще е тук</div>
-      <div id="answer-buttons" class="btn-grid"></div>
+    <div class="quiz-container">
+        <h1>Trivia Quiz</h1>
+        <div id="question-container">
+            <div id="question">Въпросът ще е тук</div>
+            <div id="answer-buttons" class="btn-grid"></div>
+        </div>
+        <button id="next-btn" class="next-btn">Следващ въпрос</button>
+        <div id="result-container" class="hide">
+            <h2>Резултат: <span id="score"></span> от <span id="total"></span></h2>
+            <button onclick="startQuiz()">Играй отново</button>
+        </div>
     </div>
-    <button id="next-btn" class="next-btn">Следващ въпрос</button>
-    <div id="result-container" class="hide">
-      <h2>Резултат: <span id="score"></span> от <span id="total"></span></h2>
-      <button onclick="startQuiz()">Играй отново</button>
-    </div>
-  </div>
-  <script src="script.js"></script>
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
