@@ -9,16 +9,22 @@
 <body>
   <div class="quiz-container">
     <h1>Trivia Quiz</h1>
-    <div id="question-container">
+
+    <button id="start-btn">Старт на куиза</button>
+
+    <div id="question-container" class="hide">
       <div id="question">Въпросът ще е тук</div>
       <div id="answer-buttons" class="btn-grid"></div>
     </div>
-    <button id="next-btn" class="next-btn">Следващ въпрос</button>
+
+    <button id="next-btn" class="next-btn hide">Следващ въпрос</button>
+
     <div id="result-container" class="hide">
       <h2>Резултат: <span id="score"></span> от <span id="total"></span></h2>
-      <button onclick="startQuiz()">Играй отново</button>
+      <button id="restart-btn">Играй отново</button>
     </div>
   </div>
+
   <script src="questions.js"></script>
   <script src="script.js"></script>
 </body>
