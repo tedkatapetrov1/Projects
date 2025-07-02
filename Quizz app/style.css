@@ -4,52 +4,53 @@ body {
     display: flex;
     justify-content: center;
     padding: 20px;
-  }
-  
-  .quiz-container {
+}
+
+.quiz-container {
     background: white;
     border-radius: 8px;
     padding: 30px;
     width: 100%;
     max-width: 500px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
-  
-  .btn-grid {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-grid {
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin-top: 20px;
-  }
-  
-  button {
+}
+
+button {
     padding: 10px;
     font-size: 16px;
     border-radius: 5px;
     border: none;
     cursor: pointer;
-  }
-  
-  button:hover {
+}
+
+button:hover {
     opacity: 0.9;
-  }
-  
-  .correct {
+}
+
+.correct {
     background-color: #4CAF50;
     color: white;
-  }
-  
-  .wrong {
+}
+
+.wrong {
     background-color: #f44336;
     color: white;
-  }
-  
-  .next-btn {
+}
+
+.next-btn {
     margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.hide {
     display: none;
-  }
-  
-  .hide {
-    display: none;
-  }
-  
+}
