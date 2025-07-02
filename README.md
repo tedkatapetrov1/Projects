@@ -8,9 +8,9 @@
 
 | Project | Description | Tech Stack |
 |--------|-------------|------------|
-| [🖱️ Click Counter](./click-counter/) | A simple app with a click button counter and a reset option. | HTML, CSS, JS |
-| [📝 To-Do List](./todo-list/) | A shopping list with add/delete functionality and persistent storage via `localStorage`. | HTML, CSS, JS |
-| [❓ Trivia Quiz](./quiz-app/) | A mini quiz game with questions, answer checks, and score tracking. | HTML, CSS, JS |
+| [🖱️ Click Counter] | A simple app with a click button counter and a reset option. | HTML, CSS, JS |
+| [📝 To-Do List] | A shopping list with add/delete functionality and persistent storage via `localStorage`. | HTML, CSS, JS |
+| [❓ Trivia Quiz] | A mini quiz game with questions, answer checks, and score tracking. | HTML, CSS, JS |
 | (more...) | I’m constantly adding new ideas and features! | 🚧 |
 
 ---
