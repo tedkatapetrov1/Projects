@@ -54,3 +54,13 @@ button:hover {
 .hide {
     display: none;
 }
+
+.explanation {
+    margin-top: 15px;
+    background: #f0f0f0;
+    /* border-left: 4px solid #4CAF50; */
+    padding: 10px;
+    font-style: italic;
+    color: #333;
+    border-radius: 4px;
+  }
