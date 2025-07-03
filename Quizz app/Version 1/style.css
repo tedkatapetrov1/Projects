@@ -25,9 +25,10 @@ body {
 button {
     padding: 10px;
     font-size: 16px;
-    border-radius: 5px;
+    border-radius: 15px;
     border: none;
     cursor: pointer;
+    margin-left: 180px;
 }
 
 button:hover {
