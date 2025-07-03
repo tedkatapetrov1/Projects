@@ -15,6 +15,12 @@ const feedback = document.getElementById('feedback');
 let selectedQuestions = [];
 let currentQuestionIndex = 0;
 let score = 0;
+let selectedCategoryName = "";
+
+const categories = {
+    geography: [],
+    sports: []
+  };
 
 window.addEventListener('DOMContentLoaded', showCategorySelection);
 
@@ -37,9 +43,28 @@ function showCategorySelection() {
 }
 
 function selectCategory(categoryName) {
-    selectedQuestions = categories[categoryName];
-    startContainer.classList.add('hide');
-    startBtn.classList.remove('hide');
+    selectedCategoryName = categoryName;
+    startBtn.classList.add('hide');
+
+    const existingScript = document.querySelector(`script[src="${categoryName}.js"]`);
+    if (existingScript) {
+        selectedQuestions = window.categories[categoryName];
+        startBtn.classList.remove('hide');
+        startContainer.classList.add('hide');
+        return;
+    }
+
+    const script = document.createElement('script');
+    script.src = `${categoryName}.js`;
+    script.onload = () => {
+        selectedQuestions = window.categories[categoryName];
+        startBtn.classList.remove('hide');
+        startContainer.classList.add('hide');
+    };
+    script.onerror = () => {
+        alert("Failed to load questions for category: " + categoryName);
+    };
+    document.body.appendChild(script);
 }
 
 startBtn.addEventListener('click', () => {
