@@ -11,6 +11,7 @@ const restartBtn = document.getElementById('restart-btn');
 const startContainer = document.getElementById('start-container');
 const categoryButtons = document.getElementById('category-buttons');
 const feedback = document.getElementById('feedback');
+const questionNumberElement = document.getElementById('question-number');
 
 let selectedQuestions = [];
 let currentQuestionIndex = 0;
@@ -95,6 +96,8 @@ function showQuestion() {
     resetState();
     const currentQuestion = selectedQuestions[currentQuestionIndex];
     questionElement.innerText = currentQuestion.question;
+
+    questionNumberElement.innerText = `Question ${currentQuestionIndex + 1} / ${selectedQuestions.length}`;
 
     currentQuestion.answers.forEach(answer => {
         const btn = document.createElement('button');
