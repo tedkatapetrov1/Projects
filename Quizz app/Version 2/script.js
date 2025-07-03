@@ -8,41 +8,67 @@ const resultContainer = document.getElementById('result-container');
 const scoreText = document.getElementById('score');
 const totalText = document.getElementById('total');
 const restartBtn = document.getElementById('restart-btn');
+const startContainer = document.getElementById('start-container');
+const categoryButtons = document.getElementById('category-buttons');
+const feedback = document.getElementById('feedback');
 
+let selectedQuestions = [];
 let currentQuestionIndex = 0;
 let score = 0;
+
+window.addEventListener('DOMContentLoaded', showCategorySelection);
+
+function showCategorySelection() {
+    startContainer.classList.remove('hide');
+    questionContainer.classList.add('hide');
+    resultContainer.classList.add('hide');
+    nextBtn.classList.add('hide');
+    categoryButtons.innerHTML = '';
+
+    startBtn.classList.add('hide');
+
+    Object.keys(categories).forEach(cat => {
+        const btn = document.createElement('button');
+        btn.classList.add('btn');
+        btn.innerText = cat.charAt(0).toUpperCase() + cat.slice(1);
+        btn.addEventListener('click', () => selectCategory(cat));
+        categoryButtons.appendChild(btn);
+    });
+}
+
+function selectCategory(categoryName) {
+    selectedQuestions = categories[categoryName];
+    startContainer.classList.add('hide');
+    startBtn.classList.remove('hide');
+}
 
 startBtn.addEventListener('click', () => {
     startBtn.classList.add('hide');
     questionContainer.classList.remove('hide');
     nextBtn.classList.add('hide');
     resultContainer.classList.add('hide');
-    startQuiz();
-});
-
-restartBtn.addEventListener('click', () => {
-    resultContainer.classList.add('hide');
-    startBtn.classList.remove('hide');
+    currentQuestionIndex = 0;
+    score = 0;
+    showQuestion();
 });
 
 nextBtn.addEventListener('click', () => {
     currentQuestionIndex++;
-    if (currentQuestionIndex < questions.length) {
+    if (currentQuestionIndex < selectedQuestions.length) {
         showQuestion();
     } else {
         showResult();
     }
 });
 
-function startQuiz() {
-    currentQuestionIndex = 0;
-    score = 0;
-    showQuestion();
-}
+restartBtn.addEventListener('click', () => {
+    resultContainer.classList.add('hide');
+    showCategorySelection();
+});
 
 function showQuestion() {
     resetState();
-    const currentQuestion = questions[currentQuestionIndex];
+    const currentQuestion = selectedQuestions[currentQuestionIndex];
     questionElement.innerText = currentQuestion.question;
 
     currentQuestion.answers.forEach(answer => {
@@ -59,11 +85,9 @@ function showQuestion() {
 
 function resetState() {
     nextBtn.classList.add('hide');
-    while (answerButtons.firstChild) {
-        answerButtons.removeChild(answerButtons.firstChild);
-    }
     explanationElement.classList.add('hide');
     explanationElement.innerText = '';
+    answerButtons.innerHTML = '';
 }
 
 function selectAnswer(e) {
@@ -76,19 +100,15 @@ function selectAnswer(e) {
         button.disabled = true;
     });
 
-    nextBtn.classList.remove('hide');
-    const currentQuestion = questions[currentQuestionIndex];
-    explanationElement.innerText = currentQuestion.explanation;
+    const currentQuestion = selectedQuestions[currentQuestionIndex];
+    explanationElement.innerText = currentQuestion.explanation || '';
     explanationElement.classList.remove('hide');
+    nextBtn.classList.remove('hide');
 }
 
 function setStatusClass(element, correct) {
     clearStatusClass(element);
-    if (correct) {
-        element.classList.add('correct');
-    } else {
-        element.classList.add('wrong');
-    }
+    element.classList.add(correct ? 'correct' : 'wrong');
 }
 
 function clearStatusClass(element) {
@@ -101,10 +121,8 @@ function showResult() {
     nextBtn.classList.add('hide');
     resultContainer.classList.remove('hide');
     scoreText.innerText = score;
-    totalText.innerText = questions.length;
-
-    const percentage = (score / questions.length) * 100;
-    const feedback = document.getElementById('feedback');
+    totalText.innerText = selectedQuestions.length;
+    const percentage = (score / selectedQuestions.length) * 100;
 
     if (percentage >= 90) {
         feedback.innerText = "🏆 Quiz Champion! You totally crushed it!";
@@ -115,6 +133,6 @@ function showResult() {
     } else if (percentage >= 30) {
         feedback.innerText = "😅 Oof! That was rough, but don’t give up!";
     } else {
-        feedback.innerText = "😢 Maybe trivia isn't your thing… yet!";
+        feedback.innerText = "🙈 Maybe trivia isn't your thing… yet!";
     }
 }
