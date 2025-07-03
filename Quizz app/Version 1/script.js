@@ -102,4 +102,19 @@ function showResult() {
     resultContainer.classList.remove('hide');
     scoreText.innerText = score;
     totalText.innerText = questions.length;
+
+    const percentage = (score / questions.length) * 100;
+    const feedback = document.getElementById('feedback');
+
+    if (percentage >= 90) {
+        feedback.innerText = "🏆 Quiz Champion! You totally crushed it!";
+    } else if (percentage >= 75) {
+        feedback.innerText = "🎉 Great job! You're on fire!";
+    } else if (percentage >= 50) {
+        feedback.innerText = "👍 Not bad! Keep practicing!";
+    } else if (percentage >= 30) {
+        feedback.innerText = "😅 Oof! That was rough, but don’t give up!";
+    } else {
+        feedback.innerText = "🙈 Maybe trivia isn't your thing… yet!";
+    }
 }
