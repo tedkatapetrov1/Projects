@@ -115,6 +115,6 @@ function showResult() {
     } else if (percentage >= 30) {
         feedback.innerText = "😅 Oof! That was rough, but don’t give up!";
     } else {
-        feedback.innerText = "🙈 Maybe trivia isn't your thing… yet!";
+        feedback.innerText = "😢 Maybe trivia isn't your thing… yet!";
     }
 }
