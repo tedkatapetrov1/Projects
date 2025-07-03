@@ -21,8 +21,8 @@ Current Files:
 
 Future Improvements:
 
-- Add question categories (e.g., History, Science, Geography).
-- Allow category selection before starting the quiz.
+- Add question categories (e.g., History, Science, Geography). - Done in version 2.0 ✅
+- Allow category selection before starting the quiz. - Done in version 2.0 ✅
 - Add a timer for each question.
 - Save and display high scores.
 - Improve mobile responsiveness and enhance the design.
