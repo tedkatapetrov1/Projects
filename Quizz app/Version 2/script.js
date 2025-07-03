@@ -20,7 +20,10 @@ let selectedCategoryName = "";
 
 const categories = {
     geography: [],
-    sports: []
+    history: [],
+    chemistry: [],
+    sports: [],
+    movies: []
   };
 
 window.addEventListener('DOMContentLoaded', showCategorySelection);
