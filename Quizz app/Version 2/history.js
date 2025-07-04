@@ -3,52 +3,102 @@ window.categories.history = [
     {
         question: "Who was the first President of the United States?",
         answers: [
-            { text: "Thomas Jefferson", correct: false },
             { text: "George Washington", correct: true },
+            { text: "Thomas Jefferson", correct: false },
             { text: "John Adams", correct: false },
-            { text: "James Madison", correct: false }
+            { text: "Benjamin Franklin", correct: false }
         ],
-        explanation: "George Washington was the first President of the United States, serving from 1789 to 1797."
+        explanation: "George Washington was elected as the first U.S. president in 1789."
     },
     {
         question: "In which year did World War II end?",
         answers: [
+            { text: "1944", correct: false },
             { text: "1945", correct: true },
-            { text: "1939", correct: false },
-            { text: "1918", correct: false },
-            { text: "1950", correct: false }
+            { text: "1946", correct: false },
+            { text: "1943", correct: false }
         ],
-        explanation: "World War II ended in 1945 after the surrender of Germany and Japan."
+        explanation: "World War II ended in 1945 with the surrender of Germany and Japan."
     },
     {
-        question: "Who was known as the 'Iron Lady'?",
+        question: "Which empire built the Colosseum?",
         answers: [
-            { text: "Margaret Thatcher", correct: true },
-            { text: "Indira Gandhi", correct: false },
-            { text: "Angela Merkel", correct: false },
-            { text: "Golda Meir", correct: false }
-        ],
-        explanation: "Margaret Thatcher, former Prime Minister of the UK, was called the 'Iron Lady' for her strong leadership."
-    },
-    {
-        question: "Which empire was ruled by Julius Caesar?",
-        answers: [
+            { text: "Greek Empire", correct: false },
+            { text: "Byzantine Empire", correct: false },
             { text: "Roman Empire", correct: true },
-            { text: "Ottoman Empire", correct: false },
-            { text: "Mongol Empire", correct: false },
-            { text: "Persian Empire", correct: false }
+            { text: "Ottoman Empire", correct: false }
         ],
-        explanation: "Julius Caesar was a leader of the Roman Empire during the late Republic period."
+        explanation: "The Roman Empire built the Colosseum in the 1st century AD."
     },
     {
-        question: "What was the main cause of the American Civil War?",
+        question: "Who was the British Prime Minister during most of World War II?",
         answers: [
-            { text: "Slavery", correct: true },
-            { text: "Taxation", correct: false },
-            { text: "Territorial disputes", correct: false },
-            { text: "Trade restrictions", correct: false }
+            { text: "Neville Chamberlain", correct: false },
+            { text: "Winston Churchill", correct: true },
+            { text: "Clement Attlee", correct: false },
+            { text: "Harold Macmillan", correct: false }
         ],
-        explanation: "The primary cause of the American Civil War was the conflict over slavery."
+        explanation: "Winston Churchill served as Prime Minister from 1940 to 1945."
+    },
+    {
+        question: "What was the name of the ship on which the Pilgrims traveled to America in 1620?",
+        answers: [
+            { text: "Santa Maria", correct: false },
+            { text: "Mayflower", correct: true },
+            { text: "Endeavour", correct: false },
+            { text: "Beagle", correct: false }
+        ],
+        explanation: "The Pilgrims traveled to North America on the Mayflower."
+    },
+    {
+        question: "The Great Wall of China was primarily built to protect against which group?",
+        answers: [
+            { text: "Mongols", correct: true },
+            { text: "Huns", correct: false },
+            { text: "Japanese", correct: false },
+            { text: "Tibetans", correct: false }
+        ],
+        explanation: "The Great Wall was constructed to defend against Mongol invasions."
+    },
+    {
+        question: "Who discovered penicillin in 1928?",
+        answers: [
+            { text: "Alexander Fleming", correct: true },
+            { text: "Marie Curie", correct: false },
+            { text: "Louis Pasteur", correct: false },
+            { text: "Edward Jenner", correct: false }
+        ],
+        explanation: "Fleming discovered penicillin by accident in his laboratory."
+    },
+    {
+        question: "The fall of the Berlin Wall occurred in which year?",
+        answers: [
+            { text: "1990", correct: false },
+            { text: "1989", correct: true },
+            { text: "1987", correct: false },
+            { text: "1991", correct: false }
+        ],
+        explanation: "The Berlin Wall fell in 1989, marking the end of the Cold War era."
+    },
+    {
+        question: "Who was the famous Egyptian queen and lover of Julius Caesar and Mark Antony?",
+        answers: [
+            { text: "Cleopatra", correct: true },
+            { text: "Nefertiti", correct: false },
+            { text: "Hatshepsut", correct: false },
+            { text: "Isis", correct: false }
+        ],
+        explanation: "Cleopatra VII ruled Egypt and had alliances with both Caesar and Antony."
+    },
+    {
+        question: "Which revolution is associated with the storming of the Bastille?",
+        answers: [
+            { text: "French Revolution", correct: true },
+            { text: "Russian Revolution", correct: false },
+            { text: "American Revolution", correct: false },
+            { text: "Industrial Revolution", correct: false }
+        ],
+        explanation: "The Bastille was stormed in 1789 during the French Revolution."
     },
     {
         question: "Who was the leader of the Soviet Union during World War II?",
@@ -58,96 +108,46 @@ window.categories.history = [
             { text: "Nikita Khrushchev", correct: false },
             { text: "Leon Trotsky", correct: false }
         ],
-        explanation: "Joseph Stalin led the Soviet Union during World War II."
+        explanation: "Stalin led the USSR through WWII and into the Cold War."
     },
     {
-        question: "Which famous ship sank in 1912 after hitting an iceberg?",
+        question: "Which explorer was the first to circumnavigate the globe?",
         answers: [
-            { text: "Lusitania", correct: false },
-            { text: "Titanic", correct: true },
-            { text: "Queen Mary", correct: false },
-            { text: "Mayflower", correct: false }
+            { text: "Christopher Columbus", correct: false },
+            { text: "Ferdinand Magellan", correct: true },
+            { text: "Marco Polo", correct: false },
+            { text: "Vasco da Gama", correct: false }
         ],
-        explanation: "The Titanic sank in 1912 after striking an iceberg on its maiden voyage."
+        explanation: "Magellan’s expedition completed the first circumnavigation, though he died before its end."
     },
     {
-        question: "Who was the first man to step on the Moon?",
+        question: "The U.S. Civil War was fought between which two groups?",
         answers: [
-            { text: "Buzz Aldrin", correct: false },
-            { text: "Neil Armstrong", correct: true },
-            { text: "Yuri Gagarin", correct: false },
-            { text: "Michael Collins", correct: false }
+            { text: "North and South", correct: true },
+            { text: "East and West", correct: false },
+            { text: "Federalists and Democrats", correct: false },
+            { text: "Colonies and Britain", correct: false }
         ],
-        explanation: "Neil Armstrong was the first man to walk on the Moon in 1969."
+        explanation: "The Civil War was between the Union (North) and Confederacy (South)."
     },
     {
-        question: "What ancient civilization built the Machu Picchu?",
+        question: "Who was assassinated in Sarajevo in 1914, sparking World War I?",
         answers: [
-            { text: "Maya", correct: false },
+            { text: "Archduke Franz Ferdinand", correct: true },
+            { text: "Kaiser Wilhelm II", correct: false },
+            { text: "Tsar Nicholas II", correct: false },
+            { text: "Woodrow Wilson", correct: false }
+        ],
+        explanation: "His assassination by Gavrilo Princip triggered the war."
+    },
+    {
+        question: "What ancient civilization built Machu Picchu?",
+        answers: [
             { text: "Aztec", correct: false },
             { text: "Inca", correct: true },
+            { text: "Maya", correct: false },
             { text: "Olmec", correct: false }
         ],
-        explanation: "Machu Picchu was built by the Inca civilization in Peru."
-    },
-    {
-        question: "Who wrote the 'Declaration of Independence'?",
-        answers: [
-            { text: "Benjamin Franklin", correct: false },
-            { text: "Thomas Jefferson", correct: true },
-            { text: "George Washington", correct: false },
-            { text: "John Hancock", correct: false }
-        ],
-        explanation: "Thomas Jefferson was the principal author of the Declaration of Independence."
-    },
-    {
-        question: "Which war was fought between the North and South regions in the United States?",
-        answers: [
-            { text: "World War I", correct: false },
-            { text: "American Civil War", correct: true },
-            { text: "Revolutionary War", correct: false },
-            { text: "War of 1812", correct: false }
-        ],
-        explanation: "The American Civil War was fought between the Northern and Southern states from 1861 to 1865."
-    },
-    {
-        question: "Who was the Egyptian queen known for her beauty and political savvy?",
-        answers: [
-            { text: "Nefertiti", correct: false },
-            { text: "Cleopatra", correct: true },
-            { text: "Hatshepsut", correct: false },
-            { text: "Ankhesenamun", correct: false }
-        ],
-        explanation: "Cleopatra was the last active ruler of the Ptolemaic Kingdom of Egypt."
-    },
-    {
-        question: "The Berlin Wall separated which two parts of Germany?",
-        answers: [
-            { text: "East and West Germany", correct: true },
-            { text: "North and South Germany", correct: false },
-            { text: "Berlin and Munich", correct: false },
-            { text: "West Germany and Austria", correct: false }
-        ],
-        explanation: "The Berlin Wall separated East Berlin (communist) and West Berlin (democratic) during the Cold War."
-    },
-    {
-        question: "Who was the British Prime Minister during most of World War II?",
-        answers: [
-            { text: "Winston Churchill", correct: true },
-            { text: "Neville Chamberlain", correct: false },
-            { text: "Clement Attlee", correct: false },
-            { text: "Tony Blair", correct: false }
-        ],
-        explanation: "Winston Churchill was the UK Prime Minister from 1940 to 1945 during WWII."
-    },
-    {
-        question: "What year did the French Revolution begin?",
-        answers: [
-            { text: "1789", correct: true },
-            { text: "1812", correct: false },
-            { text: "1776", correct: false },
-            { text: "1804", correct: false }
-        ],
-        explanation: "The French Revolution began in 1789, leading to major social and political change in France."
+        explanation: "The Incas built Machu Picchu in the Andes mountains of Peru."
     }
 ];
