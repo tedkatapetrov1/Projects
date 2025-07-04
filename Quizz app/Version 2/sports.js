@@ -3,151 +3,151 @@ window.categories.sports = [
     {
         question: "Which country won the FIFA World Cup in 2018?",
         answers: [
-            { text: "Croatia", correct: false },
-            { text: "France", correct: true },
+            { text: "Germany", correct: false },
             { text: "Brazil", correct: false },
-            { text: "Germany", correct: false }
+            { text: "France", correct: true },
+            { text: "Argentina", correct: false }
         ],
-        explanation: "France won the 2018 FIFA World Cup held in Russia."
+        explanation: "France won the 2018 FIFA World Cup by defeating Croatia 4–2."
     },
     {
-        question: "In which sport would you perform a slam dunk?",
+        question: "How many players are on a basketball team on the court?",
         answers: [
-            { text: "Volleyball", correct: false },
-            { text: "Basketball", correct: true },
-            { text: "Tennis", correct: false },
-            { text: "Soccer", correct: false }
+            { text: "6", correct: false },
+            { text: "5", correct: true },
+            { text: "7", correct: false },
+            { text: "4", correct: false }
         ],
-        explanation: "A slam dunk is a basketball move where a player jumps and forcefully scores by putting the ball directly through the hoop."
+        explanation: "Each basketball team has 5 players on the court."
     },
     {
-        question: "Who holds the record for the most Olympic gold medals?",
+        question: "Who holds the record for most Olympic gold medals?",
         answers: [
             { text: "Usain Bolt", correct: false },
+            { text: "Mark Spitz", correct: false },
             { text: "Michael Phelps", correct: true },
-            { text: "Carl Lewis", correct: false },
-            { text: "Mark Spitz", correct: false }
+            { text: "Carl Lewis", correct: false }
         ],
-        explanation: "Michael Phelps holds the record with 23 Olympic gold medals."
+        explanation: "Michael Phelps has won 23 Olympic gold medals in swimming."
     },
     {
-        question: "How many players are on a soccer team on the field?",
+        question: "Which country hosts the Wimbledon tennis tournament?",
         answers: [
-            { text: "10", correct: false },
-            { text: "11", correct: true },
-            { text: "9", correct: false },
-            { text: "12", correct: false }
-        ],
-        explanation: "A soccer team has 11 players on the field during a match."
-    },
-    {
-        question: "Which sport is known as 'the king of sports'?",
-        answers: [
-            { text: "Soccer", correct: true },
-            { text: "Basketball", correct: false },
-            { text: "Cricket", correct: false },
-            { text: "Baseball", correct: false }
-        ],
-        explanation: "Soccer is often called 'the king of sports' because of its worldwide popularity."
-    },
-    {
-        question: "Which country invented table tennis?",
-        answers: [
+            { text: "Australia", correct: false },
             { text: "United States", correct: false },
-            { text: "China", correct: false },
-            { text: "England", correct: true },
-            { text: "Japan", correct: false }
-        ],
-        explanation: "Table tennis was invented in England in the late 19th century."
-    },
-    {
-        question: "How long is an Olympic swimming pool?",
-        answers: [
-            { text: "50 meters", correct: true },
-            { text: "25 meters", correct: false },
-            { text: "100 meters", correct: false },
-            { text: "75 meters", correct: false }
-        ],
-        explanation: "An Olympic swimming pool is 50 meters long."
-    },
-    {
-        question: "Which athlete is known as the 'fastest man alive'?",
-        answers: [
-            { text: "Tyson Gay", correct: false },
-            { text: "Asafa Powell", correct: false },
-            { text: "Usain Bolt", correct: true },
-            { text: "Justin Gatlin", correct: false }
-        ],
-        explanation: "Usain Bolt holds the world record for the 100 meters sprint."
-    },
-    {
-        question: "In tennis, what is the term for a score of zero?",
-        answers: [
-            { text: "Love", correct: true },
-            { text: "Zero", correct: false },
-            { text: "Nil", correct: false },
-            { text: "Duck", correct: false }
-        ],
-        explanation: "In tennis, 'love' means zero points."
-    },
-    {
-        question: "Which country hosted the first modern Olympic Games?",
-        answers: [
             { text: "France", correct: false },
-            { text: "Greece", correct: true },
-            { text: "Italy", correct: false },
-            { text: "United Kingdom", correct: false }
+            { text: "United Kingdom", correct: true }
         ],
-        explanation: "The first modern Olympic Games were held in Athens, Greece in 1896."
+        explanation: "Wimbledon takes place in London, UK."
     },
     {
-        question: "In which sport do teams compete for the Stanley Cup?",
+        question: "In which sport would you perform a 'slam dunk'?",
         answers: [
-            { text: "Ice Hockey", correct: true },
-            { text: "Basketball", correct: false },
-            { text: "Baseball", correct: false },
-            { text: "American Football", correct: false }
+            { text: "Basketball", correct: true },
+            { text: "Volleyball", correct: false },
+            { text: "Tennis", correct: false },
+            { text: "Handball", correct: false }
         ],
-        explanation: "The Stanley Cup is awarded to the champion of the National Hockey League."
+        explanation: "A slam dunk is a scoring move in basketball."
     },
     {
-        question: "What is the length of a marathon?",
+        question: "How long is a marathon?",
         answers: [
             { text: "42.195 kilometers", correct: true },
-            { text: "50 kilometers", correct: false },
             { text: "40 kilometers", correct: false },
-            { text: "45 kilometers", correct: false }
+            { text: "26 kilometers", correct: false },
+            { text: "50 kilometers", correct: false }
         ],
-        explanation: "A marathon is 42.195 kilometers (26.2 miles) long."
+        explanation: "A marathon is officially 42.195 kilometers (26.2 miles) long."
     },
     {
-        question: "Who is the all-time leading scorer in NBA history?",
+        question: "Which sport uses a puck?",
         answers: [
-            { text: "LeBron James", correct: false },
-            { text: "Kareem Abdul-Jabbar", correct: true },
-            { text: "Michael Jordan", correct: false },
-            { text: "Wilt Chamberlain", correct: false }
+            { text: "Hockey", correct: true },
+            { text: "Baseball", correct: false },
+            { text: "Lacrosse", correct: false },
+            { text: "Golf", correct: false }
         ],
-        explanation: "Kareem Abdul-Jabbar holds the NBA all-time scoring record."
+        explanation: "Ice hockey uses a small rubber puck instead of a ball."
     },
     {
-        question: "Which sport features a 'scrum'?",
+        question: "What is the maximum break in snooker?",
         answers: [
-            { text: "Rugby", correct: true },
-            { text: "Soccer", correct: false },
-            { text: "American Football", correct: false },
-            { text: "Basketball", correct: false }
+            { text: "155", correct: false },
+            { text: "147", correct: true },
+            { text: "150", correct: false },
+            { text: "160", correct: false }
         ],
-        explanation: "A 'scrum' is a method of restarting play in rugby."
+        explanation: "A maximum break in snooker is 147 points."
     },
     {
-        question: "What is the main color of the home kit for FC Barcelona?",
+        question: "Who won the NBA championship in 2020?",
         answers: [
-            { text: "Blue and Red", correct: true },
-            { text: "Green and White", correct: false },
-            { text: "Black and Yellow", correct: false },
-            { text: "Orange and White", correct: false }
+            { text: "Miami Heat", correct: false },
+            { text: "Golden State Warriors", correct: false },
+            { text: "Los Angeles Lakers", correct: true },
+            { text: "Boston Celtics", correct: false }
         ],
-        explanation: "FC Barcelona's home kit features blue and red vertical stripes."
+        explanation: "The Lakers won the 2020 NBA Finals in the Orlando bubble."
+    },
+    {
+        question: "In what year were the first modern Olympics held?",
+        answers: [
+            { text: "1896", correct: true },
+            { text: "1900", correct: false },
+            { text: "1888", correct: false },
+            { text: "1904", correct: false }
+        ],
+        explanation: "The modern Olympic Games began in Athens in 1896."
+    },
+    {
+        question: "Which country has won the most FIFA World Cups?",
+        answers: [
+            { text: "Argentina", correct: false },
+            { text: "Germany", correct: false },
+            { text: "Brazil", correct: true },
+            { text: "Italy", correct: false }
+        ],
+        explanation: "Brazil has won the World Cup 5 times."
+    },
+    {
+        question: "Who is known as 'The King of Clay' in tennis?",
+        answers: [
+            { text: "Novak Djokovic", correct: false },
+            { text: "Roger Federer", correct: false },
+            { text: "Rafael Nadal", correct: true },
+            { text: "Andy Murray", correct: false }
+        ],
+        explanation: "Rafael Nadal earned the nickname due to his dominance on clay courts."
+    },
+    {
+        question: "In Formula 1, what color flag means the race is over?",
+        answers: [
+            { text: "Yellow", correct: false },
+            { text: "Green", correct: false },
+            { text: "Red", correct: false },
+            { text: "Checkered (black and white)", correct: true }
+        ],
+        explanation: "The checkered flag signals the end of the race."
+    },
+    {
+        question: "Which athlete is known for the 'Bolt' victory pose?",
+        answers: [
+            { text: "Mo Farah", correct: false },
+            { text: "Usain Bolt", correct: true },
+            { text: "Yohan Blake", correct: false },
+            { text: "Justin Gatlin", correct: false }
+        ],
+        explanation: "Usain Bolt’s signature pose became iconic during Olympic wins."
+    },
+    {
+        question: "Which NFL team has won the most Super Bowls?",
+        answers: [
+            { text: "Dallas Cowboys", correct: false },
+            { text: "Pittsburgh Steelers", correct: true },
+            { text: "Green Bay Packers", correct: false },
+            { text: "New York Giants", correct: false }
+        ],
+        explanation: "The Steelers have won six Super Bowls, tied with the Patriots."
     }
 ];
