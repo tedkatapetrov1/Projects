@@ -23,7 +23,8 @@ const categories = {
     history: [],
     chemistry: [],
     sports: [],
-    movies: []
+    movies: [],
+    "General Knowledge": []
   };
 
 window.addEventListener('DOMContentLoaded', showCategorySelection);
