@@ -52,23 +52,38 @@ function selectCategory(categoryName) {
 
     const existingScript = document.querySelector(`script[src="${categoryName}.js"]`);
     if (existingScript) {
-        selectedQuestions = window.categories[categoryName];
-        startBtn.classList.remove('hide');
-        startContainer.classList.add('hide');
+        handleCategoryLoaded(categoryName);
         return;
     }
 
     const script = document.createElement('script');
     script.src = `${categoryName}.js`;
     script.onload = () => {
-        selectedQuestions = window.categories[categoryName];
-        startBtn.classList.remove('hide');
-        startContainer.classList.add('hide');
+        handleCategoryLoaded(categoryName);
     };
     script.onerror = () => {
         alert("Failed to load questions for category: " + categoryName);
     };
     document.body.appendChild(script);
+}
+
+function handleCategoryLoaded(categoryName) {
+    const allQuestions = window.categories[categoryName];
+
+    if (!allQuestions || allQuestions.length === 0) {
+        alert("No questions found for this category.");
+        return;
+    }
+
+    selectedQuestions = getRandomQuestions(allQuestions, 10);
+
+    startBtn.classList.remove('hide');
+    startContainer.classList.add('hide');
+}
+
+function getRandomQuestions(questions, count) {
+    const shuffled = [...questions].sort(() => Math.random() - 0.5);
+    return shuffled.slice(0, count);
 }
 
 startBtn.addEventListener('click', () => {
