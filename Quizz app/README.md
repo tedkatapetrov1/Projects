@@ -16,8 +16,13 @@ Current Files:
 
 1. index.html — main HTML file containing the page structure.
 2. style.css — styles for the quiz's visual design.
-3. questions.js — contains the array of questions, answers, and explanations.
+3. chemistry.js — contains the array of chemistry questions, answers, and explanations.
 4. script.js — quiz logic: managing questions, answers, results, and user interactions.
+5. generalKnowledge.js — contains the array of general knowledge questions, answers, and explanations.
+6. geography.js — contains the array of geography questions, answers, and explanations.
+7. history.js — contains the array of history questions, answers, and explanations.
+8. movies.js — contains the array of movies questions, answers, and explanations.
+9. sports.js — contains the array of sports questions, answers, and explanations.
 
 Future Improvements:
 
