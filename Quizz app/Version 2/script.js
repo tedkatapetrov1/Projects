@@ -5,18 +5,20 @@ const questionElement = document.getElementById('question');
 const answerButtons = document.getElementById('answer-buttons');
 const nextBtn = document.getElementById('next-btn');
 const resultContainer = document.getElementById('result-container');
-const scoreText = document.getElementById('score');
-const totalText = document.getElementById('total');
+// const scoreText = document.getElementById('score');
+// const totalText = document.getElementById('total');
 const restartBtn = document.getElementById('restart-btn');
 const startContainer = document.getElementById('start-container');
 const categoryButtons = document.getElementById('category-buttons');
 const feedback = document.getElementById('feedback');
 const questionNumberElement = document.getElementById('question-number');
+const username = document.getElementById('username-container')
 
 let selectedQuestions = [];
 let currentQuestionIndex = 0;
 let score = 0;
 let selectedCategoryName = "";
+let usernameValue = '';
 
 const categories = {
     geography: [],
@@ -37,6 +39,7 @@ function showCategorySelection() {
     categoryButtons.innerHTML = '';
 
     startBtn.classList.add('hide');
+    username.classList.add('hide');
 
     Object.keys(categories).forEach(cat => {
         const btn = document.createElement('button');
@@ -50,6 +53,7 @@ function showCategorySelection() {
 function selectCategory(categoryName) {
     selectedCategoryName = categoryName;
     startBtn.classList.add('hide');
+    username.classList.add('hide');
 
     const existingScript = document.querySelector(`script[src="${categoryName}.js"]`);
     if (existingScript) {
@@ -76,9 +80,10 @@ function handleCategoryLoaded(categoryName) {
         return;
     }
 
-    selectedQuestions = getRandomQuestions(allQuestions, 10);
+    selectedQuestions = getRandomQuestions(allQuestions, 15);
 
     startBtn.classList.remove('hide');
+    username.classList.remove('hide');
     startContainer.classList.add('hide');
 }
 
@@ -88,7 +93,16 @@ function getRandomQuestions(questions, count) {
 }
 
 startBtn.addEventListener('click', () => {
+    const input = document.getElementById('username'); 
+    usernameValue = input.value.trim();
+
+    if (!usernameValue) {
+        alert("Please enter your name to start the quiz.");
+        return;
+    }
+
     startBtn.classList.add('hide');
+    username.classList.add('hide');
     questionContainer.classList.remove('hide');
     nextBtn.classList.add('hide');
     resultContainer.classList.add('hide');
@@ -167,19 +181,24 @@ function showResult() {
     questionContainer.classList.add('hide');
     nextBtn.classList.add('hide');
     resultContainer.classList.remove('hide');
-    scoreText.innerText = score;
-    totalText.innerText = selectedQuestions.length;
     const percentage = (score / selectedQuestions.length) * 100;
 
+    let message = "";
+
     if (percentage >= 90) {
-        feedback.innerText = "🏆 Quiz Champion! You totally crushed it!";
+        message = "🏆 Quiz Champion! You totally crushed it!";
     } else if (percentage >= 75) {
-        feedback.innerText = "🎉 Great job! You're on fire!";
+        message = "🎉 Great job! You're on fire!";
     } else if (percentage >= 50) {
-        feedback.innerText = "👍 Not bad! Keep practicing!";
+        message = "👍 Not bad! Keep practicing!";
     } else if (percentage >= 30) {
-        feedback.innerText = "😅 Oof! That was rough, but don’t give up!";
+        message = "😅 Oof! That was rough, but don’t give up!";
     } else {
-        feedback.innerText = "🙈 Maybe trivia isn't your thing… yet!";
+        message = "🙈 Maybe trivia isn't your thing… yet!";
     }
+
+    feedback.innerHTML = `Well, <b>${usernameValue}</b>! Let's see your results now:<br><br><b>Result: ${score} of ${selectedQuestions.length}</b><br><br><b>${message}</b>`;
+
+    scoreText.innerText = score;
+    totalText.innerText = selectedQuestions.length;
 }
